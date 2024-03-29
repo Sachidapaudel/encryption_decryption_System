@@ -20,9 +20,9 @@ def encryption():
         newscreen.config(bg = "red")
         
         msg = text1.get(1.0, END) #first line zero character to the end
-        msg_encodding = msg.encode("ascii") #for encodding message
+        msg_encodding = msg.encode("utf-8") #for encodding message
         base64_use = base64.b64encode(msg_encodding) #most important line for encoding use encode for decoding use decode.
-        encryption = base64_use.decode("ascii")
+        encryption = base64_use.decode("utf-8")
         
         # Label and place for newscreen
         lab1 = Label(newscreen, text="Encrypted Successfully!!", font=("Time New Roman", 12, "bold"), bg= "green")
@@ -51,9 +51,9 @@ def decryption():
             
             # main lines for encodding
             msg = text1.get(1.0, END) #first line zero character to the end
-            msg_encodding = msg.encode("ascii") #for encodding message
+            msg_encodding = msg.encode("utf-8") #for encodding message
             base64_use = base64.b64decode(msg_encodding)
-            encryption = base64_use.decode("ascii")
+            encryption = base64_use.decode("utf-8")
             
             # Label and place for newscreen
             lab1 = Label(newscreen1, text="Your Message is Decrypted!!", font=("Time New Roman", 10, "bold"), bg= "green")
